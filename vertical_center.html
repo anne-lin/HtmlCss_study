@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="flex">
+    <div  style="width: 100px;height: 100px;background-color:red;">
+        div
+    </div>
+</div>
+<div>
+    <div class="transform" style="width: 100px;height: 100px;background-color:red">
+        div
+    </div>
+</div>
+<div class="vertical">
+    <div  style="width: 100px;height: 100px;background-color:red">
+        高度确定
+    </div>
+</div>
+<div class="table">
+    <div  style="width: 100px;height: 100px;background-color:red">
+        高度确定
+    </div>
+</div>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html,
+    body{
+        height: 100%;
+    }
+    .flex{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .transform{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%); //相对于元素本身的高度
+    }
+    .vertical{
+        height: 700px;
+        line-height: 700px;
+    }
+    .vertical>div{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .table{
+        height: 700px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+</style>
+</body>
+</html>
